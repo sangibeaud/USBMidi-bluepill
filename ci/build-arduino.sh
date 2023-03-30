@@ -29,6 +29,8 @@ arduino-cli core install --additional-urls http://dan.drown.org/stm32duino/packa
 
 # Link Arduino library
 ln -s $GITHUB_WORKSPACE $HOME/Arduino/libraries/CI_Test_Library
+git clone https://github.com/TheKikGen/midiXparser.git
+
 
 # Compile all *.ino files for the Arduino Uno
 for f in **/*.ino ; do
