@@ -32,5 +32,6 @@ ln -s $GITHUB_WORKSPACE $HOME/Arduino/libraries/CI_Test_Library
 
 # Compile all *.ino files for the Arduino Uno
 for f in **/*.ino ; do
-    arduino-cli compile -b arduino:avr:uno $f
+    arduino-cli compile -v -b stm32duino:STM32F1:genericSTM32F103C $f
+    #arduino-cli compile -b stm32duino:STM32F1:bluepill $f
 done
