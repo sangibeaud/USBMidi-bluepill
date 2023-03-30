@@ -21,10 +21,11 @@ arduino-cli core update-index
 # Install Arduino default core // --remove me
 arduino-cli core install arduino:avr
 # Install Arduino STM32 core
-arduino-cli core update-index --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+# arduino-cli core update-index --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+arduino-cli core update-index --additional-urls http://dan.drown.org/stm32duino/package_STM32duino_index.json
 #--additional-urls https://stm32duinoforum.com/forum/stm32duino/package_STM32duino_index.js
-arduino-cli core install --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json  STMicroelectronics:stm32
-
+#arduino-cli core install --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json  STMicroelectronics:stm32
+arduino-cli core install --additional-urls http://dan.drown.org/stm32duino/package_STM32duino_index.json
 
 # Link Arduino library
 ln -s $GITHUB_WORKSPACE $HOME/Arduino/libraries/CI_Test_Library
